@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/> <!-- This makes the website how to read the characters on the screen -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- This makes it so the site looks good on mobile as well by scaling the site to fit the screen.-->
+        <title>Jordan Furtado | Portfolio</title> <!-- title of the website-->
+        <link rel="stylesheet" href="style.css" /> <!-- links my style.css file to here in order to style the page-->
+    </head>
+    <body>
+        <header>
+            <h1>Greetings and Welcome to Jordan Furtado's Portfolio</h1>
+            <p>Feel free to take a look at my projects, resume, as well as how to get in contact with me!</p>
+        </header>
+        <div class="menu">
+            <button class="menu-dropdown" onclick="togglemenu()">
+                <span id="dropdown-arrow">&#x3e;</span> Explore Me!</button>
+            <div class="menu-choices" id="menuChoices">
+                <a href ="about.html">About Me</a>
+                <a href ="projects.html">My Projects</a>
+                <a href ="resume.html">My Resume</a>
+                <a href ="contact.html">How to get in Touch!</a>
+            </div>
+        </div>
+        <div class="typing-animation">
+            <span id="text-animation"></span><span class="cursor">|</span>
+        </div>
+        <script src="script.js"></script> <!--This links the js file for the menu choices to pop down and togglemenu()-->
+    </body>
+</html>
