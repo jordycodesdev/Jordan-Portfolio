@@ -44,6 +44,7 @@ header h1 {
     transform-origin: top center;
     transform: scaleY(0);
     transition: transform 0.1s ease;
+    overflow: hidden;
   }
   .menu-choices.show{
     transform: scaleY(1);
@@ -91,4 +92,51 @@ header h1 {
     50%{
         opacity: 0;
     }
+}
+/*About Me Page Styleing starts here*/
+.navigation-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #d38a68;
+  padding:40px 40px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  gap: 125px;
+  font-size: 25px;
+}
+body.about-me-page {
+  padding-top: 80px;
+  margin: 0;
+}
+.navigation-buttons {
+  background-color: #a55229;
+  color: #ffd6bd;
+  padding: 20px 50px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.navigation-buttons:hover {
+  background-color: #833e20;
+}
+.JF-Logo{
+height:125px;
+margin-right: none;
+padding-left: 0;
+margin-left: -125px;
+}
+.about-me-header{
+  max-width: 800px;
+  margin:100px auto;
+  text-align: center;
+  padding: 40px 20px;
+  color: #a55229;
+  font-size: 25px;
+  line-height: 1.5;
 }
