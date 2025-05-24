@@ -14,12 +14,12 @@ function togglemenu() {
     menu.style.width = `${button.offsetWidth}px`;
   }
 }
-
+const typingletter = document.getElementById("text-animation");
+if(typingletter){
 const typingwords= ["Developer", "Programmer", "Engineer"]
 let whichword = 0;
 let whichletter = 0;
 let isDeleting = false;
-const typingletter = document.getElementById("text-animation");
 function typing() {
     const currentword = typingwords[whichword];
     const currentletter= currentword.substring(0, whichletter);
@@ -40,3 +40,25 @@ function typing() {
     }
 }
 typing();
+}
+//fade in boxes below
+document.addEventListener("DOMContentLoaded", () =>{
+    console.log("JS is loaded and running!");
+const fadein = document.querySelectorAll('.fade');
+
+const whenappear = {
+  threshold: 0.1
+};
+const appearscroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+    entry.target.classList.add('visible');
+  } else {
+    entry.target.classList.remove('visible');
+   }   
+ } );
+}, whenappear);
+fadein.forEach(box => {
+  appearscroll.observe(box);
+});
+});
